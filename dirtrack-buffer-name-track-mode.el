@@ -17,8 +17,9 @@
 ;; To use this mode, put the following in your init.el:
 ;; (require 'dirtrack-buffer-name-track-mode)
 
-;; This will be default turn fixme-mode on in all future prog-mode buffers.
-;; To enable it in a specific buffer, run fixme-mode
+;; This will be default turn dirtrack-buffer-name-track-mode on in all future
+;; prog-mode buffers.  To enable it in a specific buffer, run
+;; dirtrack-buffer-name-track-mode
 
 ;;; License:
 
@@ -41,7 +42,6 @@
 
 (defvar dirtrack-buffer-name-track-prefix "shell-")
 (defvar dirtrack-buffer-name-track-postfix "-shell")
-(defvar dirtrack-buffer-name-track-max-prompt-len 40 "Maximum length of your prompt string.")
 
 ;; It is quite convenient to have your shell buffers contain the name of the
 ;; directory they are visiting.  This requires changing the buffer name whenever
