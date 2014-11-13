@@ -3,7 +3,7 @@
 ;; Copyright (C) 2014 Nathaniel Flath <flat0103@gmail.com>
 
 ;; Author: Nathaniel Flath <flat0103@gmail.com>
-;; Version: 1.0.0
+;; Version: 1.0.1
 
 ;; This file is not part of GNU Emacs.
 
@@ -53,6 +53,7 @@
                                    dirtrack-buffer-name-track-postfix))
          (i 1)
          (full-buffer-name (concat base-buffer-name "<1>")))
+    (message base-buffer-name)
     (if (get-buffer base-buffer-name)
         (progn
           (while (get-buffer full-buffer-name)
@@ -63,7 +64,7 @@
 
 (define-minor-mode dirtrack-buffer-name-track-mode
   "Minor mode to cause shell-mode buffers change their name when the current working directory changes."
-  :init-value t
+  :init-value nil
   :group 'dirtrack-buffer-name-track-mode
   (if dirtrack-buffer-name-track-mode
       (add-hook 'dirtrack-directory-change-hook 'dirtrack-buffer-name-track-directory-change-hook-fn)
